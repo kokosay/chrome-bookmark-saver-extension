@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网页收藏夹</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>网页收藏夹</h1>
+      <button id="saveCurrentPage" class="btn btn-primary">保存当前页面</button>
+    </header>
+    
+    <main class="main-content">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜索收藏的网页...">
+      </div>
+      
+      <div id="bookmarksContainer" class="bookmarks-container">
+        <!-- 收藏列表将在这里动态渲染 -->
+        <div id="loadingSpinner" class="loading">
+          <div class="spinner"></div>
+          <p>正在加载...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

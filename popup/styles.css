@@ -1,0 +1,187 @@
+/* 重置默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 400px;
+  min-height: 500px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+}
+
+.header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #1a73e8;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0d62c9;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.search-box {
+  margin-bottom: 16px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.bookmarks-container {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+
+.bookmark-item {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bookmark-item:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+.bookmark-title {
+  font-weight: 600;
+  color: #1a73e8;
+  margin-bottom: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-url {
+  color: #5f6368;
+  font-size: 12px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-description {
+  color: #70757a;
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.bookmark-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #70757a;
+}
+
+.delete-btn {
+  background: #f8f9fa;
+  color: #d93025;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background: #fce8e6;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #70757a;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(26, 115, 232, 0.2);
+  border-top: 4px solid #1a73e8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #70757a;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #70757a;
+}
+
+.hidden {
+  display: none;
+}
